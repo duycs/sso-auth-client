@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <h2>Hello, OAuth Client welcome!</h2>
+  </div>
+  <div class="row">
+    <h4>Single sign on</h4>
+  </div>
+  <div class="row">
+    <ul>
+      <li *ngIf="!isAuthenticated" class="nav-item" [routerLinkActive]='["link-active"]'>
+        <a class="" [routerLink]='["/register"]'>Signup</a>
+      </li>
+      <li *ngIf="!isAuthenticated" class="nav-item" [routerLinkActive]='["link-active"]'>
+        <a class="" [routerLink]='["/login"]'>Login</a>
+      </li>
+      <li *ngIf="isAuthenticated">
+        <a class="" (click)="signout()" href="#">Signout {{name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h4>Target hosts</h4>
+  </div>
+
+  <div class="row">
+    <p>Not integrated hosts</p>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="nav-item" [routerLinkActive]='["link-active"]'>
+        <a class="" target="_blank" href="http://library.poststudy.s3-website-ap-southeast-1.amazonaws.com/">Home library</a>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="isAuthenticated">
+    <div class="row">
+      <p>Integrated hosts</p>
+    </div>
+    <div class="row">
+      <ul>
+        <li class="nav-item" [routerLinkActive]='["link-active"]'>
+          <a class="" target="_blank" href="https://maidoan-test-demo-api.herokuapp.com/index.html">maidoan-test-demo-api</a>
+        </li>
+
+        <li class="nav-item" *ngIf="currentUser == null" [routerLinkActive]='["link-active"]'>
+          <a class="" target="_blank" href="https://duycs-demo-net-core.herokuapp.com/">duycs-demo-net-core</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ngx-spinner></ngx-spinner>
+</div>
