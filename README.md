@@ -1,7 +1,7 @@
 # Demo Angular
 
 ### Criteria
-Demo an application use Angular+ with some component and functions
+Demo an application use Angular+ with some components and functions
 - Authentication
 - Common components
 - Servies
@@ -21,7 +21,6 @@ ng serve
 ```
 
 ### TODO
-- Authentication
 - Common components
 - Servies
 - Routing
