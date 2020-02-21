@@ -13,6 +13,9 @@ Demo an application use Angular+ with some components and functions
 - [Angular Docs](https://angular.io/docs)
 
 ### Demo
+[Dvelopment deploy](http://sso-auth-client.s3-website-ap-southeast-1.amazonaws.com/home)
+
+### Source
 [https://github.com/duycs/demo-angular](https://github.com/duycs/demo-angular)
 
 ### Run
