@@ -61,15 +61,27 @@ export class AuthService extends BaseService  {
 
 export function getClientSettings(): UserManagerSettings {
   return {
-      authority: 'https://sso-identity-server.herokuapp.com/',
-      client_id: 'angular_spa',
-      redirect_uri: 'https://sso-auth-client.s3-website-ap-southeast-1.amazonaws.com/auth-callback',
-      post_logout_redirect_uri: 'https://sso-auth-client.s3-website-ap-southeast-1.amazonaws.com/',
-      response_type:"id_token token",
-      scope:"openid profile email api.read",
-      filterProtocolClaims: true,
-      loadUserInfo: true,
-      automaticSilentRenew: true,
-      silent_redirect_uri: 'https://sso-auth-client.s3-website-ap-southeast-1.amazonaws.com/silent-refresh.html'
-  };
+    authority: 'http://localhost:5000/',
+    client_id: 'angular_spa',
+    redirect_uri: 'http://localhost:4200/auth-callback',
+    post_logout_redirect_uri: 'http://localhost:4200/',
+    response_type:"id_token token",
+    scope:"openid profile email api.read",
+    filterProtocolClaims: true,
+    loadUserInfo: true,
+    automaticSilentRenew: true,
+    silent_redirect_uri: 'http://localhost:4200/silent-refresh.html'
+};
+  // return {
+  //     authority: 'https://sso-identity-server.herokuapp.com/',
+  //     client_id: 'angular_spa',
+  //     redirect_uri: 'http://localhost:4200//auth-callback',
+  //     post_logout_redirect_uri: 'http://localhost:4200//',
+  //     response_type:"id_token token",
+  //     scope:"openid profile email api.read",
+  //     filterProtocolClaims: true,
+  //     loadUserInfo: true,
+  //     automaticSilentRenew: true,
+  //     silent_redirect_uri: 'http://localhost:4200//silent-refresh.html'
+  // };
 }

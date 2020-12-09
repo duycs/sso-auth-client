@@ -6,7 +6,7 @@ export class ConfigService {
     constructor() {}
 
     get authApiURI() {
-        return 'https://sso-identity-server.herokuapp.com/api';
+        return 'http://localhost:5000/api';
     }    
      
     get resourceApiURI() {
